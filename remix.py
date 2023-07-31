@@ -4,7 +4,7 @@ import librosa
 import soundfile as sf
 
 # Function to check if a waveform contains sound based on its energy/amplitude
-def has_sound(waveform, threshold=0.001):
+def has_sound(waveform, threshold=1e-5):
     return waveform.max() > threshold
 
 # Function to adjust the stem proportions based on the presence of sound in each stem
